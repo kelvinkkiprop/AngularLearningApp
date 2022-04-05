@@ -1,0 +1,28 @@
+A. ANGULAR SHORT NOTES
+1. The 3 Methods of Handling inter-component communication
+a. Input properties
+b. Output properties
+c. Template variables
+
+B. CSS to Component
+1. Simple styles
+a. Within the component i.e. inside `` - It applys attributes to the component only (not even the child)
+b. Adding
+
+C. INTERPOLATIONS AND BINDING
+a. Interpolation - uses {} to bind data
+b. Binding - uses [] to bind data
+
+D. HANDLING NULL VALUES
+- Can be done by adding ? after the object/before value
+
+E. SERVICES
+- Allows to define logics in seperate file
+
+F. ROUTING AND NAVIGATING PAGES
+
+G. VALIDATION METHODS
+1. Form-driven validation
+- Good for small forms
+2. Model-driven validation
+- Good for large forms

@@ -1,0 +1,56 @@
+A. ANGULAR
+1. Install
+npm install - g @angular/cli
+or
+npm install -g @angular/cli@latest
+
+2. Create new project
+ng new Angular-Learning-App
+
+3. Run server (Default port 4200)
+npm start
+or
+ng serve -o --AppName=2000
+or
+ng port
+
+
+B. Bootstrap
+1. Install:
+npm install bootstrap
+2. Import
+a. Method I
+- In angular.json(inside :styles)
+"node_modules/bootstrap/dist/css/bootstrap.min.css"
+- In angular.json(inside :scripts)
+"node_modules/bootstrap/dist/js/bootstrap.js",
+b. Method II
+- Add on styles.css
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+B. JQuery (used by Toastr)
+1. Install:
+npm install jquery --save
+2. Import
+a. Method I
+- In angular.json(inside :scripts)
+"node_modules/jquery/dist/jquery.min.js",
+
+C. Toastr
+1. Install
+npm install toastr --save
+2. Import
+a. Method I
+- In angular.json(inside :styles)
+"node_modules/toastr/build/toastr.min.css"
+- In angular.json(inside :scripts)
+"node_modules/toastr/build/toastr.min.js"
+b. Method II
+- Add on styles.css
+@import "~toastr/build/toastr.min.css";
+
+D. Font Awesome
+1. Install (in MainCSS)
+npm install font-awesome
+2. Import (in MainCSS)
+@import "~font-awesome/css/font-awesome.min.css";
