@@ -20,9 +20,13 @@ import {
   EventService,
   CreateEventComponent,
   EventRouteActivator,
-  EventListResolver
+  EventListResolver,
+  CreateSessionComponent,
+  SessionListComponent
   } from './events/index';
 import { AuthService } from './user/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { collapsableWellComponent } from './common/collapsable-well.component';
 
 //Modules
 @NgModule({
@@ -34,9 +38,17 @@ import { AuthService } from './user/auth.service';
     NavBarComponent,
     CreateEventComponent,
     Error404Component,
+    CreateSessionComponent,
+    SessionListComponent,
+    collapsableWellComponent,
+    CreateSessionComponent
   ],
+  //Add
+  // exports: [SessionListComponent, CreateSessionComponent],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     //Routes
     RouterModule.forRoot(appRoutes)
   ],
@@ -50,7 +62,7 @@ import { AuthService } from './user/auth.service';
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState },
   ],
   //Boostraping
-  bootstrap: [MainAppComponent]
+  bootstrap: [MainAppComponent],
 })
 export class AppModule { }
 

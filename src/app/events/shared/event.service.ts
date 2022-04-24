@@ -5,7 +5,8 @@ import { IEvent } from "./event.model";
 @Injectable()//To allow to be injected to other components
 export class EventService{
 
-  //Methods
+  //METhODS
+  //getAllEvents
   getAllEvents():Observable<IEvent[]>{
     let subject = new Subject<IEvent[]>()
     setTimeout(()=>{
@@ -17,10 +18,18 @@ export class EventService{
     return subject
   }
 
+  //getOneEvent
   getOneEvent(id:number){
     return EVENTS.find(event=>event.id===id)
   }
 
+
+  //saveEvent
+  saveEvent(event:any){
+    event.id = 999
+    event.session = []
+    EVENTS.push(event)
+  }
 
 }
 
